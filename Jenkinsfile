@@ -21,7 +21,7 @@ pipeline{
             steps {
                 echo 'Deploying application...'
                 sh ''' 
-                cp -r dist/* /var/www/html/
+                sudo cp -r dist/* /var/www/html/
                 sudo systemctl restart nginx
                 '''
             
